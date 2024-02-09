@@ -1,0 +1,6 @@
+@ActifsMateriels_HostAddress = http://localhost:5087
+
+GET {{ActifsMateriels_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

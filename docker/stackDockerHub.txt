@@ -1,0 +1,14 @@
+version: '3.9'
+services:  
+
+  actifsmateriels:
+    container_name: amio_api_actifsmateriels
+    image: marklhor/actifsmateriels:latest
+    mem_limit: 250m
+    cpu_shares: 256
+    network_mode: bridge
+    restart: on-failure:5
+    ports:
+      - 5100:8080
+    volumes:
+      - c:\docker\AMIO_ActifsMateriel\appsetings\appsettings.json:/app/appsettings.json
