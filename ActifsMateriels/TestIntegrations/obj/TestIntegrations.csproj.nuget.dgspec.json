@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj": {}
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj",
         "projectName": "ActifsMateriels",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj"
               }
             }
           }
@@ -107,14 +107,14 @@
         }
       }
     },
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -136,8 +136,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\DAL.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\DAL.csproj"
               }
             }
           }
@@ -189,14 +189,14 @@
         }
       }
     },
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\DAL.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -218,11 +218,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj"
               }
             }
           }
@@ -274,14 +274,14 @@
         }
       }
     },
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -348,14 +348,14 @@
         }
       }
     },
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj",
         "projectName": "Parameters",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\Parameters.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\Parameters\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\Parameters\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -408,14 +408,14 @@
         }
       }
     },
-    "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj": {
+    "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj",
+        "projectUniqueName": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj",
         "projectName": "TestIntegrations",
-        "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj",
+        "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\TestIntegrations\\TestIntegrations.csproj",
         "packagesPath": "C:\\Users\\cda07nard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\TestIntegrations\\obj\\",
+        "outputPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\TestIntegrations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -437,11 +437,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\ActifsMateriels\\ActifsMateriels.csproj"
               },
-              "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\cda07nard\\Desktop\\V406\\ActifsMateriels\\BLL\\BLL.csproj"
+              "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\cda07nard\\source\\repos\\_FilRouge2isa2022\\Part02_V3\\Dev\\V406\\ActifsMateriels\\BLL\\BLL.csproj"
               }
             }
           }

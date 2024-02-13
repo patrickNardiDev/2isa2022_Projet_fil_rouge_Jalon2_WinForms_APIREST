@@ -28,9 +28,9 @@ public class GestionMatrielRequestDto : DtoAbstract
         public GestionMatrielRequestDtoValidator()
         {
             RuleFor(x => x.CRUDtype).NotNull().NotEmpty();
-            RuleFor(x => x.NewNomMat).NotEmpty().WithMessage("Le nom du matériel ne peut pas être vide ");
-            RuleFor(x => x.NewArchive).NotNull();
-            RuleFor(x => x.NewListIdCategories).NotNull().WithMessage("Un matériel doit avoir au moins une catégorie associée");
+            RuleFor(x => x.NewNomMat).NotEmpty().WithMessage("Le nom du matériel ne peut pas être vide\n\r");
+            RuleFor(x => x.NewArchive).NotNull().WithMessage("Un matériel doit avoir au moins une catégorie\n\r");
+            RuleFor(x => x.NewListIdCategories).NotNull().WithMessage("Un matériel doit avoir au moins une catégorie associée\n\r");
         }
     }
 }

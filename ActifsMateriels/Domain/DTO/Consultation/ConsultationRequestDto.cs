@@ -21,8 +21,8 @@ namespace Domain.DTO.Consultation
         public ConsultationRequestDtoValidator()
         {
             RuleFor(x => x.Categorie)
-                .NotNull().WithMessage("la catégorie ne peut être nulle")
-                .NotEmpty().WithMessage("la catégorie ne peut être vide");
+                .NotNull().WithMessage("la catégorie ne peut être nulle\n\r")
+                .NotEmpty().WithMessage("la catégorie ne peut être vide\n\r");
         }
     }
 }

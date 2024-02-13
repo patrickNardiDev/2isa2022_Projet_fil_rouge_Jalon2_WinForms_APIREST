@@ -92,10 +92,14 @@ public class BLLConnexionServiceUnitTest
         var connexionService = connexonServiceMock.Object;
 
         // Act (réaliser)
-        var resultActual = await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue);
+        await Assert.ThrowsAsync<ForbiddenAccessException>(async () => await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue));
+        //Code si role 3 a accès à l'API
+        //var resultActual = await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue);
 
         // Asset (vérifier)
-        Assert.Equal((Role.RoleEnum)userExpected.idSIRole, resultActual.Role);
+        //Assert.Equal((Role.RoleEnum)userExpectedZ.idSIRole, resultActual.Role);
+        //END Code si role 3 a accès à l'API
+
     }
 
     /// <summary>
@@ -105,7 +109,7 @@ public class BLLConnexionServiceUnitTest
     /// <param name="emailValue">courriel</param>
     /// <param name="passwordValue">mot de passe</param>
     [Theory]
-    [InlineData(Role.RoleEnum.noRole, "111@amio.com", "+1Mot@Passe")]
+    //[InlineData(Role.RoleEnum.noRole, "111@amio.com", "+1Mot@Passe")]
     [InlineData(Role.RoleEnum.Consultation, "120@amio.com", "+1Mot@Passe")]
     [InlineData(Role.RoleEnum.Gestion, "115@amio.com", "+1Mot@Passe")]
     public async void ConnexionUser_With_RoleInEnumRole_Should_UserTransitWithRoleInEnumRole(Role.RoleEnum RoleValue, string emailValue, string passwordValue)
@@ -192,10 +196,15 @@ public class BLLConnexionServiceUnitTest
         var connexionService = connexonServiceMock.Object;
 
         // Act (réaliser)
-        var resultActual = await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue);
+        await Assert.ThrowsAsync<UnauthorizeException>(async () => await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue));
+
+        //Code si role 3 a accès à l'API
+        //var resultActual = await connexionService.ConnexionUserAsync(emailInputValue, passwordInputValue);
 
         // Asset (vérifier)
-        Assert.Equal((Role.RoleEnum)userExpected.idSIRole, resultActual.Role);
+        //Assert.Equal((Role.RoleEnum)userExpected.idSIRole, resultActual.Role);
+        //END Code si role 3 a accès à l'API
+
     }
 
     /// <summary>
@@ -393,35 +402,40 @@ public class BLLConnexionServiceUnitTest
         var connexonService = new BLLConnexionService(_dbContext, _configuration, _bCrypService);
 
         // Act (réaliser)
-        var resultActual = await connexonService.ConnexionUserAsync(emailInputValue, passwordInputValue);
+        await Assert.ThrowsAsync<UnauthorizeException>(async () => await connexonService.ConnexionUserAsync(emailInputValue, passwordInputValue));
 
-        // Asset (vérifier)
-        // je técupère la liste des roles dans le token par la classe JwtSecurityTokenHandler https://learn.microsoft.com/en-us/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=msal-web-dotnet-latest
-        var ActualToken = resultActual.AccessToken;
-        var Handler = new JwtSecurityTokenHandler();
-        var HandlerToken = Handler.ReadJwtToken(ActualToken) as JwtSecurityToken;
-        var RolesActualToken = (HandlerToken.Claims.Where(c => c.Type.Contains("role")).ToList()).Select(c => c.Value).ToList();
-        // func lamba pour tester les correspondance engre Actual et Excepted
-        var test = () =>
-        {
-            bool result = false;
-            int compt = 0;
-            foreach (var roleActual in RolesActualToken)
-            {
-                if (!resultExcepted.Contains(roleActual))
-                    result = false;
-                else
-                {
-                    result = true;
-                    compt++;
-                }
-            }
-            if (compt != RolesActualToken.Count && RolesActualToken.Count != resultExcepted.Count)
-                return false;
-            else return true;
-        };
+        //Code si role 3 a accès à l'API
+        //var resultActual = await connexonService.ConnexionUserAsync(emailInputValue, passwordInputValue);
 
-        Assert.True(test());
+        //// Asset (vérifier)
+        //// je técupère la liste des roles dans le token par la classe JwtSecurityTokenHandler https://learn.microsoft.com/en-us/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=msal-web-dotnet-latest
+        //var ActualToken = resultActual.AccessToken;
+        //var Handler = new JwtSecurityTokenHandler();
+        //var HandlerToken = Handler.ReadJwtToken(ActualToken) as JwtSecurityToken;
+        //var RolesActualToken = (HandlerToken.Claims.Where(c => c.Type.Contains("role")).ToList()).Select(c => c.Value).ToList();
+        //// func lamba pour tester les correspondance engre Actual et Excepted
+        //var test = () =>
+        //{
+        //    bool result = false;
+        //    int compt = 0;
+        //    foreach (var roleActual in RolesActualToken)
+        //    {
+        //        if (!resultExcepted.Contains(roleActual))
+        //            result = false;
+        //        else
+        //        {
+        //            result = true;
+        //            compt++;
+        //        }
+        //    }
+        //    if (compt != RolesActualToken.Count && RolesActualToken.Count != resultExcepted.Count)
+        //        return false;
+        //    else return true;
+        //};
+
+        //Assert.True(test());
+        //END Code si role 3 a accès à l'API
+
     }
 
     /// <summary>
