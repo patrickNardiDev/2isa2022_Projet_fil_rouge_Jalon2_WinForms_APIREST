@@ -43,7 +43,7 @@ internal class BLLConnexionService : IBLLConnexionService
         //               2.1.2.2.1 je lève une exeption personnelle
 
         var user = await _dbContext.User.GetByEmailAsync(email);
-        if (user is null) throw new UnauthorizedAccessException(); ;
+        if (user is null) throw new ForbiddenAccessException(); 
         bool verified = _bcrypService.Verify(password, user.password);
 
         // aucune correspondance trouvée 
@@ -52,8 +52,8 @@ internal class BLLConnexionService : IBLLConnexionService
         // définition du role suivant l'énum, + est connecté ou non
         bool UserIsConnected = false;
         Role.RoleEnum myRole;
-        //var a = Role._List.ToList().Contains((Role.RoleEnum)(user.idSIRole));
-        if (user.idSIRole is null) { user.idSIRole = 3; } // 3 TestU si Role null =>  UserTransit correspondant
+        if (user.idSIRole is null) { throw new ForbiddenAccessException(); } // 3 TestU si Role null =>  UserTransit correspondant
+
         if (user.idSIRole == Convert.ToInt32(RoleEnum.Consultation) || user.idSIRole == Convert.ToInt32(RoleEnum.Gestion)) // 2 TestU si Role Consultation => UserTransit correspondant
         {
             UserIsConnected = true;
@@ -61,8 +61,9 @@ internal class BLLConnexionService : IBLLConnexionService
         }
         else // 3 TestU si ni consultation ni gestion (noRole et ou null ?) => UserTransit correspondant
         {
-            UserIsConnected = false;
-            myRole = RoleEnum.noRole;
+            throw new UnauthorizeException();
+            //UserIsConnected = false;
+            //myRole = RoleEnum.noRole;
         }
 
 
@@ -74,7 +75,8 @@ internal class BLLConnexionService : IBLLConnexionService
             myToken = await Task.FromResult(GenerateJwtToken(user.id.ToString(), new List<string>() { "User" })); // 6 TestU si role consultation => Token avec les role user
 
         else
-            myToken = await Task.FromResult(GenerateJwtToken(user.id.ToString(), new List<string>() { })); // 7 TestU si ni role gestion ni role consultaion (noRole et ou null ?) => Token sans role
+            throw new UnauthorizeException();
+            //myToken = await Task.FromResult(GenerateJwtToken(user.id.ToString(), new List<string>() { })); // 7 TestU si ni role gestion ni role consultaion (noRole et ou null ?) => Token sans role
 
         return new UserTransit() // 8 TestU => correspondance entre UserTransit supposé et réalisé
         {

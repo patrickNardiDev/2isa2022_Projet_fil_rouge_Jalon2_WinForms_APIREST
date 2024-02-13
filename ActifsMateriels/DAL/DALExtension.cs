@@ -58,7 +58,8 @@ public static class DALExtension
             /// Chose Data type with DataBaseType in appsettings
             IConfiguration configuration = services.GetRequiredService<IConfiguration>();
             int myDbType = 0; // Default MariaDB
-            var IsIntDBType = Int32.TryParse(configuration.GetSection("DataBaseType").Value,out myDbType);
+            var IsIntDBType = Int32.TryParse(configuration.GetSection("DataBaseType").Value, out myDbType);
+            // if (!IsIntDBType) throw new 
             switch ((DBType)myDbType)
             {
                 case DBType.MariaDB:

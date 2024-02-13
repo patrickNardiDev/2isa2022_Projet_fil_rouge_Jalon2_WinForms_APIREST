@@ -31,8 +31,8 @@ builder.Services.TryAddSingleton<IParameters>(parameters);
 // Add services to the container.
 builder.Services.AddControllers(options =>
 {
-#if !DEBUG
     options.Filters.Add<ApiExceptionFilterAttribute>();
+#if !DEBUG
 #endif
 });
 

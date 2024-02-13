@@ -29,7 +29,7 @@ internal class BLLGestionMaterielService : IBLLGestionMaterielService
         //long testId = 0;
         if (idcategorie <= 0) //TODO, voir avec test
         {
-            throw new NotFoundEntitiesExeption();
+            throw new NotFoundEntityException(nameof(Categorie), idcategorie);
         }
         else
         {

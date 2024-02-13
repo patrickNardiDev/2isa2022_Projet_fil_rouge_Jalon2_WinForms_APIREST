@@ -17,11 +17,11 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
             { typeof(NotFoundEntityException), HandleNotFoundException }, // 404
             { typeof(NotFoundEntitiesExeption), HandleNotFoundException },
             { typeof(UnauthorizeException), HandleUnauthorizedAccessException }, //401
-            { typeof(UnauthorizedAccessException), HandleForbiddenAccessException }, //403
+            { typeof(ForbiddenAccessException), HandleForbiddenAccessException }, //403
             {typeof(InsertEntityException), HandleBadRequest }, //400
             {typeof(UpdateEntityException), HandleBadRequest },
             {typeof(DeleteEntityException), HandleBadRequest },
-            {typeof(ValidationException), HandleBadRequest }, // Fluentvalidator
+            {typeof(ValidationException), HandleValidationException }, // Fluentvalidator 415
             {typeof(Domain.Exeption.SysException), HandleSysException } 
          // { typeof(ForbiddenAccessException), HandleForbiddenAccessException },
 
@@ -63,7 +63,11 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
             Title = "Client error.",
             Detail = exception?.Message,
         };
-        context.Result = new BadRequestObjectResult(details);
+        context.Result = new BadRequestObjectResult(details)
+        {
+            //Value = exception?.Message,
+
+        };
         context.ExceptionHandled = true;
     }
 
@@ -73,7 +77,7 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     /// <param name="context">Context of exception</param>
     private void HandleNotFoundException(ExceptionContext context)
     {
-        var exception = context.Exception as NotFoundEntityException;
+        var exception = context.Exception;
 
         var details = new ProblemDetails()
         {
@@ -87,10 +91,12 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
         context.Result = new NotFoundObjectResult(details)
         {
             StatusCode = StatusCodes.Status404NotFound,
+            //Value = exception?.Message,
         };
 
         context.ExceptionHandled = true;
     }
+
 
     /// <summary>
     /// Handle for Unauthorized Access Exception 401
@@ -98,7 +104,7 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     /// <param name="context">Context of the exception</param>
     private void HandleUnauthorizedAccessException(ExceptionContext context)
     {
-        var exception = context.Exception as UnauthorizedAccessException;
+        var exception = context.Exception as UnauthorizeException;
 
         var details = new ProblemDetails
         {
@@ -110,7 +116,9 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 
         context.Result = new ObjectResult(details)
         {
-            StatusCode = StatusCodes.Status401Unauthorized
+            StatusCode = StatusCodes.Status401Unauthorized,
+            //Value = exception?.Message,
+
         };
 
         context.ExceptionHandled = true;
@@ -130,16 +138,41 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
             Title = "Forbidden",
             Type = "https://tools.ietf.org/html/rfc7231#section-6.5.3",
             Detail = exception?.Message,
-
         };
 
         context.Result = new ObjectResult(details)
         {
-            StatusCode = StatusCodes.Status403Forbidden
+            StatusCode = StatusCodes.Status403Forbidden,
+            //Value = exception?.Message,
+
         };
 
         context.ExceptionHandled = true;
     }
+
+    private void HandleValidationException(ExceptionContext context)
+    {
+        var exception = context.Exception as ValidationException;
+
+        var details = new ProblemDetails()
+        {
+            Status = StatusCodes.Status415UnsupportedMediaType,
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.13",
+            Title = "Format Error",
+            Detail = exception?.Message,
+
+        };
+
+        context.Result = new NotFoundObjectResult(details)
+        {
+            StatusCode = StatusCodes.Status415UnsupportedMediaType,
+            //Value = exception?.Message,
+
+        };
+
+        context.ExceptionHandled = true;
+    }
+
 
     private void HandleSysException(ExceptionContext context)
     {
@@ -148,7 +181,7 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
         var details = new ProblemDetails()
         {
             Status = StatusCodes.Status418ImATeapot,
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+            Type = "https://developer.mozilla.org/fr/docs/Web/HTTP/Status/418",
             Title = "Systeme Error.",
             Detail = exception?.Message,
 
@@ -157,6 +190,8 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
         context.Result = new NotFoundObjectResult(details)
         {
             StatusCode = StatusCodes.Status418ImATeapot,
+            //Value = exception?.Message,
+
         };
 
         context.ExceptionHandled = true;
@@ -181,6 +216,8 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
         context.Result = new ObjectResult(details)
         {
             StatusCode = StatusCodes.Status500InternalServerError
+            //Value = "Erreur inatandue",
+
         };
 
         context.ExceptionHandled = true;

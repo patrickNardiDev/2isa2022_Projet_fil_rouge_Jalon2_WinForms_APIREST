@@ -3,6 +3,7 @@ using DAL.Session.Interface;
 using Dapper;
 using Domain.Entities;
 using Domain.Exeption;
+using System;
 
 
 namespace DAL.Repository.Implementation.MariaDB;
@@ -46,7 +47,7 @@ internal class UserRepositoryMariaDB : IUserRepository
                         WHERE Email = @email";
 
         result = await db.Connection.QueryFirstOrDefaultAsync<User>(myQuery, new { email });
-        if (result is null) throw new UnauthorizedAccessException();
+        if (result is null) throw new ForbiddenAccessException();
 
         // Default value of return
         //if (result is null) throw new SysException("Aucune correspondance"); // 2 TestU, pas de correspondance => SysException
