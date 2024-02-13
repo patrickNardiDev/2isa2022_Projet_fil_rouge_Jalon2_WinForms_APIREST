@@ -1,10 +1,10 @@
-﻿# Application Client-Serveur (Windows Forms API REST)
+﻿# Application Client-Serveur .Net (Windows Forms API REST)
 
 Projet de mise en situation professionnelle dans le cadre du RNCP 31678 de niveau 6 Concepteur Développeur d’application ESRP 2isa Millau
 
 EPCF 2 - Projet fil-rouge jalon 2 | application client-serveur .NET 8
 
-Résumé :
+## Résumé :
 
 L'association AMIO m'a confié, la simplification la maintenance du parc matériel en améliorant la communication entre
 
@@ -42,14 +42,40 @@ Fil-Rouge Phase 2 | Application web | 09 février 2024
 
 Patrick Nardi | CDA07
 
-https://patricknardi.com/
+## Liens
 
-https://www.francecompetences.fr/recherche/rncp/31678/
+[https://patricknardi.com/](https://patricknardi.com/)
 
-![1707397009867](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397009867.png) ![1707397022614](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397022614.png)
+[Francecompetences](https://www.francecompetences.fr/recherche/rncp/31678/)
+
+[AMIO formation Concepteur Développeur d\'Applications](https://amio-millau.fr/formations/cda)
+
+## Architecture n-tiers de l'api :
+
+![1707810346143](image/readme/1707810346143.png)
+
+
+## Architecture du client Windows Forms
+
+![1707810370864](image/readme/1707810370864.png)
+
+
+## Diagrammes de classe des Entités :
 
 ![1707397052054](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397052054.png)
 
+
+## Diagramme de classe de l'api, flux de gestion
+
 ![1707397066182](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397066182.png)
 
-![1707397120206](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397120206.png) ![1707397132827](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397132827.png) ![1707397110880](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397110880.png)
+
+## IHM
+
+![1707810203310](image/readme/1707810203310.png)
+
+![1707810246607](image/readme/1707810246607.png)
+
+ ![1707810270192](image/readme/1707810270192.png)
+
+ ![1707810287099](image/readme/1707810287099.png)
