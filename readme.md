@@ -52,23 +52,19 @@ Patrick Nardi | CDA07
 
 ## Architecture n-tiers de l'api :
 
-![1707810346143](image/readme/1707810346143.png)
-
+![1707811976510](image/readme/1707811976510.png)
 
 ## Architecture du client Windows Forms
 
 ![1707810370864](image/readme/1707810370864.png)
 
-
 ## Diagrammes de classe des Entités :
 
 ![1707397052054](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397052054.png)
 
-
 ## Diagramme de classe de l'api, flux de gestion
 
 ![1707397066182](image/PATRICK_NARDI__Projet_fil_rouge_Jalon2_Resume/1707397066182.png)
-
 
 ## IHM
 
